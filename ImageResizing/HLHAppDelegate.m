@@ -19,8 +19,29 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
   
-  dispatch_async(dispatch_get_global_queue(0, 0), ^{ [self testResizing]; });
+  
+  dispatch_queue_t resizeQueue = dispatch_queue_create("com.ribeto.resizeQueue", DISPATCH_QUEUE_CONCURRENT);
+  
+  dispatch_async(resizeQueue, ^{ [self testResizing]; });
   return YES;
+}
+
+
+- (uint64_t)resizeImages:(NSArray *)images
+                 toSizes:(NSArray *)sizes
+              useImageIO:(BOOL)useImageIO
+              timesToRun:(NSInteger)timesToRun {
+  
+  uint64_t timeItTook = dispatch_benchmark(timesToRun, ^{
+    @autoreleasepool {
+      for( UIImage *image in images ) {
+        for( NSValue *sizeValue in sizes ) {
+          [image ior_resizeToSize:[sizeValue CGSizeValue]];
+        }
+      }
+    }
+  });
+  return timeItTook;
 }
 
 - (void)testResizing {
@@ -33,28 +54,12 @@
                      [NSValue valueWithCGSize:CGSizeMake(500, 500)],
                      [NSValue valueWithCGSize:CGSizeMake(100, 100)]];
   
-  uint64_t imageIoTime = dispatch_benchmark(1, ^{
-    @autoreleasepool {
-      for( UIImage *image in images ) {
-        for( NSValue *sizeValue in sizes ) {
-          [image ior_resizeToSize:[sizeValue CGSizeValue]];
-        }
-      }
-    }
-  });
+  NSInteger timesToRun = 1;
+  
+  uint64_t imageIoTime = [self resizeImages:images toSizes:sizes useImageIO:YES timesToRun:timesToRun];
   NSLog(@"Resizing using image io : %llu ns", imageIoTime);
   
-  uint64_t coreGraphicsTime = dispatch_benchmark(1, ^{
-    @autoreleasepool {
-      for( UIImage *image in images ) {
-        for( NSValue *sizeValue in sizes ) {
-          [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill
-                                      bounds:[sizeValue CGSizeValue]
-                        interpolationQuality:kCGInterpolationLow];
-        }
-      }
-    }
-  });
+  uint64_t coreGraphicsTime = [self resizeImages:images toSizes:sizes useImageIO:NO timesToRun:timesToRun];
   NSLog(@"Resizing using core graphics : %llu ns", coreGraphicsTime);
   
   if( coreGraphicsTime < imageIoTime ) {
