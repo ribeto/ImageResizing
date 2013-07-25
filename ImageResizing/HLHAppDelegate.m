@@ -36,7 +36,13 @@
     @autoreleasepool {
       for( UIImage *image in images ) {
         for( NSValue *sizeValue in sizes ) {
-          [image ior_resizeToSize:[sizeValue CGSizeValue]];
+          if( useImageIO ) {
+            [image ior_resizeToSize:[sizeValue CGSizeValue]];
+          } else {
+            [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill
+                                        bounds:[sizeValue CGSizeValue]
+                          interpolationQuality:kCGInterpolationLow];
+          }
         }
       }
     }
