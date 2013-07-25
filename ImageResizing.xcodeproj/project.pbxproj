@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		216B4F5117A1461E004050A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216B4F5017A1461E004050A2 /* UIKit.framework */; };
+		216B4F5317A1461E004050A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216B4F5217A1461E004050A2 /* Foundation.framework */; };
+		216B4F5517A1461E004050A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216B4F5417A1461E004050A2 /* CoreGraphics.framework */; };
+		216B4F5B17A1461E004050A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F5917A1461E004050A2 /* InfoPlist.strings */; };
+		216B4F5D17A1461E004050A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F5C17A1461E004050A2 /* main.m */; };
+		216B4F6117A1461E004050A2 /* HLHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F6017A1461E004050A2 /* HLHAppDelegate.m */; };
+		216B4F6317A1461E004050A2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F6217A1461E004050A2 /* Default.png */; };
+		216B4F6517A1461E004050A2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F6417A1461E004050A2 /* Default@2x.png */; };
+		216B4F6717A1461E004050A2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F6617A1461E004050A2 /* Default-568h@2x.png */; };
+		216B4F7217A14775004050A2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216B4F7117A14775004050A2 /* ImageIO.framework */; };
+		216B4F7C17A15B9F004050A2 /* UIImage+ImageIOResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F7B17A15B9F004050A2 /* UIImage+ImageIOResizing.m */; };
+		216B4F8317A15BBE004050A2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F7E17A15BBE004050A2 /* UIImage+Alpha.m */; };
+		216B4F8417A15BBE004050A2 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F8017A15BBE004050A2 /* UIImage+Resize.m */; };
+		216B4F8517A15BBE004050A2 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 216B4F8217A15BBE004050A2 /* UIImage+RoundedCorner.m */; };
+		216B4F8B17A17E7C004050A2 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F8817A17E7C004050A2 /* earth.jpg */; };
+		216B4F8C17A17E7C004050A2 /* helixnebula.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F8917A17E7C004050A2 /* helixnebula.jpg */; };
+		216B4F8D17A17E7C004050A2 /* square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 216B4F8A17A17E7C004050A2 /* square.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		216B4F4D17A1461E004050A2 /* ImageResizing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageResizing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		216B4F5017A1461E004050A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		216B4F5217A1461E004050A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		216B4F5417A1461E004050A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		216B4F5817A1461E004050A2 /* ImageResizing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageResizing-Info.plist"; sourceTree = "<group>"; };
+		216B4F5A17A1461E004050A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		216B4F5C17A1461E004050A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		216B4F5E17A1461E004050A2 /* ImageResizing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageResizing-Prefix.pch"; sourceTree = "<group>"; };
+		216B4F5F17A1461E004050A2 /* HLHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHAppDelegate.h; sourceTree = "<group>"; };
+		216B4F6017A1461E004050A2 /* HLHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHAppDelegate.m; sourceTree = "<group>"; };
+		216B4F6217A1461E004050A2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		216B4F6417A1461E004050A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		216B4F6617A1461E004050A2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		216B4F7117A14775004050A2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		216B4F7A17A15B9F004050A2 /* UIImage+ImageIOResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageIOResizing.h"; sourceTree = "<group>"; };
+		216B4F7B17A15B9F004050A2 /* UIImage+ImageIOResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageIOResizing.m"; sourceTree = "<group>"; };
+		216B4F7D17A15BBE004050A2 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		216B4F7E17A15BBE004050A2 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		216B4F7F17A15BBE004050A2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		216B4F8017A15BBE004050A2 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		216B4F8117A15BBE004050A2 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		216B4F8217A15BBE004050A2 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		216B4F8817A17E7C004050A2 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
+		216B4F8917A17E7C004050A2 /* helixnebula.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helixnebula.jpg; sourceTree = "<group>"; };
+		216B4F8A17A17E7C004050A2 /* square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = square.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		216B4F4A17A1461E004050A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				216B4F7217A14775004050A2 /* ImageIO.framework in Frameworks */,
+				216B4F5117A1461E004050A2 /* UIKit.framework in Frameworks */,
+				216B4F5317A1461E004050A2 /* Foundation.framework in Frameworks */,
+				216B4F5517A1461E004050A2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		216B4F4417A1461E004050A2 = {
+			isa = PBXGroup;
+			children = (
+				216B4F5617A1461E004050A2 /* ImageResizing */,
+				216B4F4F17A1461E004050A2 /* Frameworks */,
+				216B4F4E17A1461E004050A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		216B4F4E17A1461E004050A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F4D17A1461E004050A2 /* ImageResizing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		216B4F4F17A1461E004050A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F7117A14775004050A2 /* ImageIO.framework */,
+				216B4F5017A1461E004050A2 /* UIKit.framework */,
+				216B4F5217A1461E004050A2 /* Foundation.framework */,
+				216B4F5417A1461E004050A2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		216B4F5617A1461E004050A2 /* ImageResizing */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F7817A15B9F004050A2 /* CoreGraphics */,
+				216B4F7917A15B9F004050A2 /* ImageIO */,
+				216B4F5F17A1461E004050A2 /* HLHAppDelegate.h */,
+				216B4F6017A1461E004050A2 /* HLHAppDelegate.m */,
+				216B4F5717A1461E004050A2 /* Supporting Files */,
+			);
+			path = ImageResizing;
+			sourceTree = "<group>";
+		};
+		216B4F5717A1461E004050A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F8717A17E7C004050A2 /* TestImages */,
+				216B4F5817A1461E004050A2 /* ImageResizing-Info.plist */,
+				216B4F5917A1461E004050A2 /* InfoPlist.strings */,
+				216B4F5C17A1461E004050A2 /* main.m */,
+				216B4F5E17A1461E004050A2 /* ImageResizing-Prefix.pch */,
+				216B4F6217A1461E004050A2 /* Default.png */,
+				216B4F6417A1461E004050A2 /* Default@2x.png */,
+				216B4F6617A1461E004050A2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		216B4F7817A15B9F004050A2 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F7D17A15BBE004050A2 /* UIImage+Alpha.h */,
+				216B4F7E17A15BBE004050A2 /* UIImage+Alpha.m */,
+				216B4F7F17A15BBE004050A2 /* UIImage+Resize.h */,
+				216B4F8017A15BBE004050A2 /* UIImage+Resize.m */,
+				216B4F8117A15BBE004050A2 /* UIImage+RoundedCorner.h */,
+				216B4F8217A15BBE004050A2 /* UIImage+RoundedCorner.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		216B4F7917A15B9F004050A2 /* ImageIO */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F7A17A15B9F004050A2 /* UIImage+ImageIOResizing.h */,
+				216B4F7B17A15B9F004050A2 /* UIImage+ImageIOResizing.m */,
+			);
+			path = ImageIO;
+			sourceTree = "<group>";
+		};
+		216B4F8717A17E7C004050A2 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				216B4F8817A17E7C004050A2 /* earth.jpg */,
+				216B4F8917A17E7C004050A2 /* helixnebula.jpg */,
+				216B4F8A17A17E7C004050A2 /* square.jpg */,
+			);
+			path = TestImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		216B4F4C17A1461E004050A2 /* ImageResizing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 216B4F6A17A1461E004050A2 /* Build configuration list for PBXNativeTarget "ImageResizing" */;
+			buildPhases = (
+				216B4F4917A1461E004050A2 /* Sources */,
+				216B4F4A17A1461E004050A2 /* Frameworks */,
+				216B4F4B17A1461E004050A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageResizing;
+			productName = ImageResizing;
+			productReference = 216B4F4D17A1461E004050A2 /* ImageResizing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		216B4F4517A1461E004050A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HLH;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Hristo Hristov";
+			};
+			buildConfigurationList = 216B4F4817A1461E004050A2 /* Build configuration list for PBXProject "ImageResizing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 216B4F4417A1461E004050A2;
+			productRefGroup = 216B4F4E17A1461E004050A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				216B4F4C17A1461E004050A2 /* ImageResizing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		216B4F4B17A1461E004050A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				216B4F5B17A1461E004050A2 /* InfoPlist.strings in Resources */,
+				216B4F6317A1461E004050A2 /* Default.png in Resources */,
+				216B4F6517A1461E004050A2 /* Default@2x.png in Resources */,
+				216B4F6717A1461E004050A2 /* Default-568h@2x.png in Resources */,
+				216B4F8B17A17E7C004050A2 /* earth.jpg in Resources */,
+				216B4F8C17A17E7C004050A2 /* helixnebula.jpg in Resources */,
+				216B4F8D17A17E7C004050A2 /* square.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		216B4F4917A1461E004050A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				216B4F5D17A1461E004050A2 /* main.m in Sources */,
+				216B4F6117A1461E004050A2 /* HLHAppDelegate.m in Sources */,
+				216B4F7C17A15B9F004050A2 /* UIImage+ImageIOResizing.m in Sources */,
+				216B4F8317A15BBE004050A2 /* UIImage+Alpha.m in Sources */,
+				216B4F8417A15BBE004050A2 /* UIImage+Resize.m in Sources */,
+				216B4F8517A15BBE004050A2 /* UIImage+RoundedCorner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		216B4F5917A1461E004050A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				216B4F5A17A1461E004050A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		216B4F6817A1461E004050A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		216B4F6917A1461E004050A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		216B4F6B17A1461E004050A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageResizing/ImageResizing-Prefix.pch";
+				INFOPLIST_FILE = "ImageResizing/ImageResizing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		216B4F6C17A1461E004050A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageResizing/ImageResizing-Prefix.pch";
+				INFOPLIST_FILE = "ImageResizing/ImageResizing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		216B4F4817A1461E004050A2 /* Build configuration list for PBXProject "ImageResizing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				216B4F6817A1461E004050A2 /* Debug */,
+				216B4F6917A1461E004050A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		216B4F6A17A1461E004050A2 /* Build configuration list for PBXNativeTarget "ImageResizing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				216B4F6B17A1461E004050A2 /* Debug */,
+				216B4F6C17A1461E004050A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 216B4F4517A1461E004050A2 /* Project object */;
+}
