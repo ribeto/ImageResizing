@@ -26,45 +26,41 @@
 - (void)testResizing {
 
   NSLog(@"Starting Test");
-  NSArray *images = @[@"helixnebula.jpg",
-                      @"earth.jpg",
-                      @"square.jpg"];
+  NSArray *images = @[[UIImage imageNamed:@"helixnebula.jpg"],
+                      [UIImage imageNamed:@"earth.jpg"]];
+
   NSArray *sizes = @[[NSValue valueWithCGSize:CGSizeMake(1000, 1000)],
                      [NSValue valueWithCGSize:CGSizeMake(500, 500)],
                      [NSValue valueWithCGSize:CGSizeMake(100, 100)]];
   
-  uint64_t n = dispatch_benchmark(1, ^{
-    for( NSString *imageName in images ) {
-      @autoreleasepool {
-        UIImage *image = [UIImage imageNamed:imageName];
+  uint64_t imageIoTime = dispatch_benchmark(1, ^{
+    @autoreleasepool {
+      for( UIImage *image in images ) {
         for( NSValue *sizeValue in sizes ) {
           [image ior_resizeToSize:[sizeValue CGSizeValue]];
         }
       }
     }
   });
-  NSLog(@"Resizing using image io : %llu ns", n);
+  NSLog(@"Resizing using image io : %llu ns", imageIoTime);
   
-  uint64_t nn = dispatch_benchmark(1, ^{
+  uint64_t coreGraphicsTime = dispatch_benchmark(1, ^{
     @autoreleasepool {
-      for( NSString *imageName in images ) {
-        @autoreleasepool {
-          UIImage *image = [UIImage imageNamed:imageName];
-          for( NSValue *sizeValue in sizes ) {
-            [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill
-                                        bounds:[sizeValue CGSizeValue]
-                          interpolationQuality:kCGInterpolationLow];
-          }
+      for( UIImage *image in images ) {
+        for( NSValue *sizeValue in sizes ) {
+          [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill
+                                      bounds:[sizeValue CGSizeValue]
+                        interpolationQuality:kCGInterpolationLow];
         }
       }
     }
   });
-  NSLog(@"Resizing using core graphics : %llu ns", nn);
+  NSLog(@"Resizing using core graphics : %llu ns", coreGraphicsTime);
   
-  if( nn < n ) {
-    NSLog(@"Core graphics is faster by %llu ns", n-nn);
+  if( coreGraphicsTime < imageIoTime ) {
+    NSLog(@"Core graphics is faster by %llu ns", imageIoTime-coreGraphicsTime);
   } else {
-    NSLog(@"Image IO is faster by %llu ns", nn-n);
+    NSLog(@"Image IO is faster by %llu ns", coreGraphicsTime-imageIoTime);
   }
   
 }
